@@ -41,9 +41,15 @@ async function scrappy(marca) {
     }
 
     return products;
-  }, "dell");
+  }, "lenovo");
 
-  console.log(notebooks);
+  const sortedNotebooks = notebooks.sort(
+    (a, b) =>
+      parseFloat(a.price.replace("$", "")) -
+      parseFloat(b.price.replace("$", ""))
+  );
+
+  console.log(sortedNotebooks);
 
   await browser.close();
 }
