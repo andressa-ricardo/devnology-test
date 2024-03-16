@@ -31,7 +31,7 @@
 
 <hr/>
 
-##  📖 Bibliotecas usadas: 
+##  📖 Bibliotecas usadas:
 
 - puppeteer
 - express
