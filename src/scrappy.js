@@ -12,7 +12,7 @@ export async function scrappy(marca) {
     const products = [];
 
     for (let i = 0; i < all.length; i++) {
-      const title = all[i].querySelector("a").title.toLowerCase(); // pegando o titulo pelo elemento title 
+      const title = all[i].querySelector("a").title.toLowerCase(); // pegando o titulo pelo elemento title
       // verificando se o título do produto contém a marca especificada
       if (title.includes(marca.toLowerCase())) {
         const image = all[i].querySelector("img").src || "";
@@ -65,7 +65,14 @@ export async function scrappy(marca) {
     console.log((notebooks[i] = product));
   }
   await browser.close();
+
+  // filtrando do menor valor pro maior
+  notebooks.sort(
+    (a, b) =>
+      parseFloat(a.buy_options[0].price) - parseFloat(b.buy_options[0].price)
+  );
+
   return { notebooks };
 }
 
-scrappy("lenovo");
+scrappy("lenovo")
