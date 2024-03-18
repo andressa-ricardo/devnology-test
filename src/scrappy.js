@@ -66,13 +66,12 @@ export async function scrappy(marca) {
   }
   await browser.close();
 
-  // filtrando do menor valor pro maior
+  //filtrando os notebooks do menor valor pro maior
   notebooks.sort(
     (a, b) =>
-      parseFloat(a.buy_options[0].price) - parseFloat(b.buy_options[0].price)
+      parseFloat(a.buy_options[0].price.replace("$", "")) -
+      parseFloat(b.buy_options[0].price.replace("$", ""))
   );
 
   return { notebooks };
 }
-
-scrappy("lenovo")
