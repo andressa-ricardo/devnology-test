@@ -2,11 +2,12 @@
 
 ## ⌨️ Como usar:
 
-- <p> git clone https://github.com/andressa-ricardo/devnology-test.git </p>
+- git clone https://github.com/andressa-ricardo/devnology-test.git 
 - <code>npm install</code> ou <code>yarn</code> para instalar as dependências.
 - <code>npm start</code> ou <code>yarn start</code> para iniciar o servidor.
-- acesse http://localhost:3000?marca=lenovo no seu navegador. 
-- trocando a marca na url, você vai ter acesso a resultados da marca escolhida.
+- Acesse: http://localhost:3000?marca=lenovo no seu navegador e atualize para requisitar.
+- Se quiser filtrar notebooks de outra marca, apenas troque a mesma na url e você vai ter acesso aos resultados da marca escolhida.
+- No final do scraping será criado um arquivo chamado: "dados.json". Dentro dele estará o resultado. 
   
 <hr/>
 
@@ -36,8 +37,8 @@
 - puppeteer
 - express
 - bodyparser
-- cors
-
+- fs
+  
 <hr/>
 
 
